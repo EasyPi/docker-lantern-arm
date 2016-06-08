@@ -1,0 +1,31 @@
+sudo: required
+
+language: go
+
+go:
+  - 1.6
+
+services:
+  - docker
+
+env:
+  - LANTERN_VERSION=2.3.0
+
+install:
+  - curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+  - sudo apt-get install -y nodejs
+  - sudo npm i gulp-cli -g
+
+script: ./build.sh $LANTERN_VERSION
+
+deploy:
+  provider: releases
+  api_key:
+    secure: "ftZEyofsfYqA9JtOoLQv0SNAQ2QVlgIOTsQrgh2nefjw7pLpFpcmqovELEHN1OgBMdgUSR/GA31aIIoHaX2tIZxxBUMjX+Ximr90/knAg8pd4e7IT8SEKjYz7tU5CBDEK0njNKyovS8jDc5hN6TWtukDddj/HqjBnRZv+oOfIMBAEWu4kEX7fMhN9gcmH3C7Rq/riLBDSViIFYsxEZeTZFitTIgbHUgGOxs6Y75NP0Gnw58m/trmQUUXjvboGAavdmLqApM4CJAdkX8AC/vvetDnfltLq3UZzdsltM8OVHYyqAy45rC7QMunZnz1lssHrIM8ltlQJNV4LXT5vYIj97cQsob90GYSViKwU1JudXrCPobzZfD1SUQpTurAmp+tJWnnfj4XNIxIp8eGB2NgFWd55jSrSmY33xJjQwpFfp3au+kjWf51ihTqriMeeWr74HMFmQyTtu0jjLYPisMFFC8hqYokjQax2KPS4beMpSQUbSesGcZO4W6aeIUoM6KyKomvDLJ7BEWA2/WXr17LwVdNr2WHHhZsfIInY3gMILoFFr6wZd31eOIK2L/xye2qxrtefrFnmBJUJlcjmXt/eAm7RWh0qxAaqVAdhu49VfBJ0gdm5lUwkFrRsYRZvONdrT4fxz3D93akpQgVCYJ5++NS6dOdxfrrXmikVvts78M="
+  file:
+  - lantern-$LANTERN_VERSION-armv6h
+  - lantern-$LANTERN_VERSION-armv7h
+  - lantern_$LANTERN_VERSION-1_armhf.deb
+  skip_cleanup: true
+  on:
+    tags: true
