@@ -9,7 +9,7 @@ services:
   - docker
 
 env:
-  - LANTERN_VERSION=4.2.5
+  - LANTERN_VERSION=4.4.0
 
 install:
   - curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
