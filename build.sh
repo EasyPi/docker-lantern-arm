@@ -23,7 +23,7 @@ cp lantern-$VERSION-armv6h lantern/usr/bin/lantern
 cat > lantern/DEBIAN/control <<_EOF_
 Package: lantern
 Version: $VERSION-1
-Maintainer: noreply@easypi.info
+Maintainer: noreply@easypi.pro
 Homepage: https://getlantern.org
 Architecture: armhf
 Priority: optional
