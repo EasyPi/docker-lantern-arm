@@ -9,3 +9,8 @@ docker-lantern-arm
 Latest version: [![release](https://img.shields.io/github/release/getlantern/lantern.svg)](https://github.com/getlantern/lantern/releases/latest)
 
 :flashlight: Lantern for Raspberry Pi
+
+:warning: Lantern is not consider safe anymore?
+People were [caught][1] by using it.
+
+[1]: https://www.williamlong.info/archives/5573.html
