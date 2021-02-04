@@ -10,7 +10,7 @@ Latest version: [![release](https://img.shields.io/github/release/getlantern/lan
 
 :flashlight: Lantern for Raspberry Pi
 
-:warning: Lantern is not consider safe anymore?
-People were [caught][1] by using it.
+:warning: The original github [repo][2] does not look normal. Maybe it was compromised by :cn: gov. People were [caught][1] by using it.
 
 [1]: https://www.williamlong.info/archives/5573.html
+[2]: https://github.com/getlantern/lantern
